@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitoring Kualitas Air Sumur Bor</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- LIBRARY EXCEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- BAGIAN KIRI -->
+    <div class="left">
+        <div class="header">
+            <p class="nama">PUTRI NATASYA LISANDRA (2240304010)</p>
+            <p class="tanggal" id="tanggal"></p>
+            <p class="jam" id="jam"></p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <p>NILAI pH</p>
+                <h2 id="ph">-</h2>
+            </div>
+
+            <div class="card">
+                <p>KEKERUHAN</p>
+                <h2 id="ntu">-</h2>
+            </div>
+
+            <div class="card">
+                <p>NILAI TDS</p>
+                <h2 id="tds">-</h2>
+            </div>
+
+            <div class="card">
+                <p>WARNA</p>
+                <h2 id="warna">-</h2>
+            </div>
+
+            <div class="card highlight">
+                <p>KONDISI AIR</p>
+                <h2 id="kondisi">-</h2>
+            </div>
+
+            <div class="card status">
+                <p>STATUS</p>
+                <h2 id="status">-</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- BAGIAN KANAN -->
+    <div class="right">
+        <h1>
+            MONITORING<br>
+            KUALITAS AIR<br>
+            SUMUR BOR
+        </h1>
+
+        <p>
+            Rajinlah memantau kadar air yang digunakan setiap hari demi 
+            kesehatan dan kenyamanan bersama.
+        </p>
+
+        <button onclick="downloadExcel()">UNDUH REKAPAN KUALITAS AIR</button>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
